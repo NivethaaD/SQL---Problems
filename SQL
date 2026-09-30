@@ -11,3 +11,10 @@ where low_fats = 'Y' and recyclable = "Y"
 
 select name from Customer
 where referee_id != 2 or referee_id is Null
+
+3.  Big Countries
+
+# Write your MySQL query statement below
+
+select name, population, area from World
+where area >= 3000000 or population >= 25000000
