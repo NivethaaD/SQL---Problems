@@ -18,3 +18,11 @@ where referee_id != 2 or referee_id is Null
 
 select name, population, area from World
 where area >= 3000000 or population >= 25000000
+
+4. Replace Employee ID With The Unique Identifier
+
+# Write your MySQL query statement below
+
+select EmployeeUNI.unique_id, Employees.name from Employees
+left join EmployeeUNI
+on Employees.id = EmployeeUNI.id
