@@ -42,3 +42,13 @@ BEGIN
 
   );
 END
+
+6. Employees Whose Manager Left the Company
+
+# Write your MySQL query statement below
+
+select employee_id from Employees e
+where salary < 30000 
+and e.manager_id is not NULL
+and not exists (select 1 from Employees m where m.employee_id = e.manager_id )
+order by employee_id
