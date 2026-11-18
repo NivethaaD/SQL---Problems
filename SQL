@@ -60,3 +60,4 @@ order by employee_id
 select class from Courses
 group by class
 having count(class) >= 5
+
