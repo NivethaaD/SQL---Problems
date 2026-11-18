@@ -52,3 +52,11 @@ where salary < 30000
 and e.manager_id is not NULL
 and not exists (select 1 from Employees m where m.employee_id = e.manager_id )
 order by employee_id
+
+7. Classes With at Least 5 Students
+
+# Write your MySQL query statement below
+
+select class from Courses
+group by class
+having count(class) >= 5
